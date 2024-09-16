@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="world_axes">
+    <static>true</static>
+    
+    <!-- X-axis -->
+    <link name="x_axis_link">
+      <visual name="x_axis_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>1.0</length>
+          </cylinder>
+        </geometry>
+        <pose>0 0 0 0 0 0</pose>
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Y-axis -->
+    <link name="y_axis_link">
+      <visual name="y_axis_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>1.0</length>
+          </cylinder>
+        </geometry>
+        <pose>0 0 0 0 0 1.570796</pose>
+        <material>
+          <ambient>0 1 0 1</ambient>
+          <diffuse>0 1 0 1</diffuse>
+        </material>
+      </visual>
+    </link>
+
+    <!-- Z-axis -->
+    <link name="z_axis_link">
+      <visual name="z_axis_visual">
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>1.0</length>
+          </cylinder>
+        </geometry>
+        <pose>0 0 0 1.570796 0 0</pose>
+        <material>
+          <ambient>0 0 1 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

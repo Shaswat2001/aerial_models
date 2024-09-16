@@ -1,0 +1,44 @@
+<sdf version='1.7'>
+  <model name='parrot_bebop'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.001103 -1.8e-05 -4e-06 0 -0 0</pose>
+        <mass>4.68848</mass>
+        <inertia>
+          <ixx>0.430475</ixx>
+          <ixy>-1.79316e-05</ixy>
+          <ixz>-1.23322e-06</ixz>
+          <iyy>0.430587</iyy>
+          <iyz>4.52382e-07</iyz>
+          <izz>0.592651</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://parrot_bebop/meshes/bebop_model.stl</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://parrot_bebop/meshes/bebop_model.stl</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <!-- Define a reflective very dark gray material -->
+          <ambient>0.1 0.1 0.1 1</ambient>
+          <diffuse>0.1 0.1 0.1 1</diffuse>
+          <specular>0.3 0.3 0.3 1</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+    <plugin name="ros_kinematic_uav" filename="libros_kinematic_uav.so"/>
+  </model>
+</sdf>
